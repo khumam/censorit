@@ -1,0 +1,20 @@
+{
+    "name": "khumam/censorit",
+    "description": "Censorit is a package that can be used to censor the inputted words",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Khoerul Umam",
+            "email": "khoerulumam@students.unnes.ac.id"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "khumam\\censorit\\": "src/"
+      }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
