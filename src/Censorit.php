@@ -5,32 +5,60 @@ namespace khumam\censorit;
 class Censorit
 {
     protected $string;
-    protected $type;
-
-    protected const FULL = 'FULL';
-    protected const HALF = 'HALF';
-    protected const FIRST = 'FIRST';
-    protected const LAST = 'LAST';
-
-    public function __construct()
-    {
-            $this->type = self::FULL;
-    }
-
-    public function censor(string $string)
+    
+    /**
+     * __construct
+     *
+     * @param  mixed $string
+     * @return void
+     */
+    public function __construct($string)
     {
         $this->string = $string;
-        return $this;
     }
-
+    
+    /**
+     * censor
+     *
+     * @param  mixed $string
+     * @return Censorit
+     */
+    public static function censor(string $string)
+    {
+        $censorit = new Censorit($string);
+        return $censorit;
+    }
+    
+    /**
+     * full
+     *
+     * @param  mixed $withSpace
+     * @return void
+     */
     public function full(bool $withSpace = true)
     {
         return CensoritCore::fullCensor($this->string, $withSpace);
     }
-
+    
+    /**
+     * half
+     *
+     * @param  mixed $offset
+     * @return void
+     */
     public function half(int $offset = 2)
     {
-        $this->type = self::HALF;
         return CensoritCore::halfCensor($this->string, $offset);
+    }
+    
+    /**
+     * middle
+     *
+     * @param  mixed $offset
+     * @return void
+     */
+    public function middle(int $offset = 2, bool $reverse = false)
+    {
+        return CensoritCore::middleCensor($this->string, $offset, $reverse);
     }
 }
