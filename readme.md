@@ -1,7 +1,7 @@
-## Hallo selamat datang di Censorit
+# Hallo selamat datang di Censorit
 Censorit merupakan sebuah package PHP yang memiliki fungsi untuk memberikan efek sensor terhadap suatu kata. Censorit sebagian besar menggunakan regex untuk menentukan posisi karakter mana yang akan disensor.
 
-#### Cara instalasi
+## Cara instalasi
 Pastikan sudah memiliki composer di mesin kalian. Jika belum, silakan install composer terlebih dahulu.
 
 Untuk menginstall Censorit, jalankan perintah di bawah
@@ -12,7 +12,7 @@ composer require khumam/censorit
 
 Jika sudah selesai, artinya Censorit siap digunakan.
 
-#### Cara penggunaan
+## Cara penggunaan
 Cara penggunaannya sangat mudah. Contohnya dapat dilihat di bawah ini.
 
 ```php
@@ -33,7 +33,7 @@ $censoredString = Censorit::censor($string)->half() // Hasil ABCDEF GHI**
 $censoredString = Censorit::censor($string)->middle() // Hasil AB**** ***JK
 ```
 
-#### Kumpulan method
+## Kumpulan method
 Ada beberapa method yang bisa digunakan di dalam Censorit.
 
 |Method|Parameter|Deskripsi|Example|
@@ -44,7 +44,7 @@ Ada beberapa method yang bisa digunakan di dalam Censorit.
 
 Jika offset lebih besar dari kata, maka hasilnya akan disensor seluruh kata.
 
-#### TO DO LIST
+## To do list
 - [X] Sensor full teks
 - [X] Sensor full teks selain spasi
 - [X] Sensor di awal teks sebanyak offset
@@ -52,3 +52,6 @@ Jika offset lebih besar dari kata, maka hasilnya akan disensor seluruh kata.
 - [X] Sensor di tengah teks sebanyak offset
 - [X] Sensor kecuali di tengah teks sebanyak offset
 - [ ] Sensor di posisi random 
+
+## Kontribusi
+Saya sangat mengharapkan teman-teman untuk berkontribusi di repo ini. Detail kontribusi akan dijelaskan di lain waktu.
